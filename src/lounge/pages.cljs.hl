@@ -1,0 +1,7 @@
+(ns lounge.pages
+  (:require [lounge.workflow :as flow]
+            [silicone.paper :as paper]))
+
+(def home (flow/flow "home" (a :href "#!/nothome" "nothome!") (paper/paper-card :heading "Testing w/ Cam!")))
+
+(def workflow [home])
