@@ -1,18 +1,17 @@
 (set-env!
  :dependencies  '[[org.clojure/clojure       "1.7.0"]
-                  [adzerk/bootlaces          "0.1.13" :scope "test"]
-                  [degree9/lounge.boot       "0.1.0"  :scope "test"]]
+                  [hoplon/boot-hoplon        "0.1.13"  :scope "test"]
+                  [degree9/lounge.boot       "0.3.0-SNAPSHOT"  :scope "test"]
+                  [degree9/boot-semver       "1.2.0-SNAPSHOT"  :scope "test"]]
  :resource-paths   #{"src"})
 
 (require
- '[adzerk.bootlaces :refer :all]
- '[lounge.boot :refer :all])
-
-(def +version+ "0.1.0")
+ '[hoplon.boot-hoplon :refer :all]
+ '[lounge.boot :refer :all]
+ '[boot-semver.core :refer :all])
 
 (task-options!
  pom {:project 'degree9/lounge.pages
-      :version +version+
       :description ""
       :url         ""
       :scm {:url ""}})
